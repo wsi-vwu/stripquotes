@@ -1,0 +1,19 @@
+<h1> easy website to strip quotes!</h1>
+<div> Input <input type='text' id='input'></div>
+<div> Output <input type='text' id='output' disabled></div>
+<script>
+
+document.getElementById("input").setAttribute('size','100');
+document.getElementById("output").setAttribute('size','100');
+
+</script>
+
+<script>
+var inputBox = document.getElementById('input');
+
+inputBox.onkeyup = function(){
+ 
+   var val = document.getElementById('input').value
+  document.getElementById('output').value = val.replace(/['"]+/g, '');
+}
+</script>
